@@ -8,9 +8,9 @@ first create a directly called stock_rnn_data:  <br />
 mkdir stock_rnn_data
 ```
 <br />
-Next, run stock-forecast_tweet.py:  <br />
+Next, run stock-forecast_tweet.py: <br />
 ```
-python3 ./stock-forecast_tweet.py
+  python3 ./stock-forecast_tweet.py
 ```
 <br />
 it is imperative you run this first as this also scrapes the data. All other files assume you already have data in the correct format
