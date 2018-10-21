@@ -73,7 +73,7 @@ api = ArchiveAPI('0ba6dc04a8cb44e0a890c00df88c393a')
 years = [2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007]
 months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 # only for making it faster for the hackathon, otherwise remove the quotes pls
-'''
+
 for year in years:
     for month in months:
         mydict = api.query(year, month)
@@ -90,7 +90,7 @@ for year in years:
             except:
                 pass
         fout.close()
-'''
+
 #preparing data with open('./stock_rnn_data/DJIA_indices_data.csv', 'r',encoding="utf-8") as csvfile:
 with open('./data/DJIA_indices_data.csv', 'r') as csvfile:
     spamreader = csv.reader(csvfile, delimiter=',')
@@ -167,7 +167,7 @@ count_total_articles = 0
 count_main_not_exist = 0
 count_unicode_error = 0
 count_attribute_error = 0
-'''
+
 for year in years:  # search for every month
     for month in months:
         file_str = './stock_rnn_data/' + str(year) + '-' + '{:02}'.format(month) + '.json'
@@ -257,7 +257,7 @@ interpolated_df.to_csv('./stock_rnn_data/sample_interpolated_df_10_years_filtere
                        sep='\t', encoding='utf-8')
 
 
-'''
+
 # Reading the data as pickle file
 dataframe_read = pd.read_pickle('./stock_rnn_data/pickled_ten_year_filtered_lead_para.pkl')
 
